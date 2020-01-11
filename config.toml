@@ -1,7 +1,7 @@
 baseURL = "https://rinitis-alergica-mexico.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Cayman"
+title = "Rintis"
 theme = "cayman-hugo-theme"
 
 # Google analytics
