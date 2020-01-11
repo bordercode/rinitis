@@ -8,29 +8,29 @@ theme = "cayman-hugo-theme"
 googleAnalytics = "UA-123456789-1"
 
 # Disqus comments
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "4insight"
 
 # Syntax highlighting
 pygmentsCodefences = true
 pygmentsStyle = "pygments"
 
 [taxonomies]
-  tag = "tags"
+  tag = "Análisis"
 
 [permalinks]
   post = "/:filename/"
 
 [params]
   # Header text, can be markdown
-  project_name = "Cayman Hugo Theme"
-  project_tagline = "A clean, responsive Hugo theme, ported from the original Jekyll Cayman theme"
-
+  project_name = "Expresiones de salud pública en el contexto del fenómeno de urbanización en México:"
+  project_tagline = "egresos hospitalarios por Rinitis alérgica en zonas metropolitanas."
+  
   # Date format for post list and single pages
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 
   # Footer text, can be markdown
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cayman](https://github.com/zwbetz-gh/cayman-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  footer = "[José Luis Manzanares Rivera](https://joseluismanzanaresrivera.github.io/Research/index.html) El Colegio de la Frontera Norte 2020."
 
   # If true, the CSS/JS for Katex math typesetting are enabled
   katex = true
@@ -41,8 +41,8 @@ pygmentsStyle = "pygments"
 
   # Header colors
   header_heading_color = "#fff"
-  header_background_color = "#159957"
-  header_background_color_secondary = "#155799"
+  header_background_color = "#de125d"
+  header_background_color_secondary = "#ff6161"
 
   # Text colors
   section_headings_color = "#159957"
