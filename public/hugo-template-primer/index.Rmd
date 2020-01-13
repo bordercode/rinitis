@@ -39,6 +39,47 @@ annotate("text", x="Chiapas", y=52, label="16")+
 annotate("rect", xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill="deeppink3")
 
 ggplotly(ta)
-
 ```
 Fuente: Elaboración propia datos SINAIS 2015.
+
+
+La estimación permite distinguir un subconjunto de 12 entidades en
+donde el problema de rinitis es particularmente elevado, la estimación de
+tasa de morbilidad ajustada por edad y sexo en este subconjunto supera la
+tasa promedio en el país que es de 16 habitantes por millón.
+Entre este subconjunto de entidades se encuentran importantes centros
+urbanos en el país como Ciudad de México, Guanajuato, Querétaro y el
+Estado de México, sin embargo, el cálculo revela que la mayor tasa de
+morbilidad se encuentra en el estado de Durango, donde alcanza un valor
+de 120 personas para el sexo femenino y 75 personas por millón de habitantes para el sexo masculino.
+Asimismo, a pesar de que entre las entidades de mayor tasa se halla un
+patrón que parece afectar en mayor medida al sexo masculino, este patrón
+no se verifica en el resto de las entidades y de hecho al corroborar con una
+prueba de diferencia entre medias no se tiene evidencia de una diferencia
+estadísticamente significativa.3
+La heterogeneidad observada en esta primera estimación da cuenta de
+la complejidad de los determinantes de este padecimiento. Para comprender mejor su distribución en términos espaciales y aportar elementos adicionales para su entendimiento, la Figura 2 representa la ocurrencia de
+casos por centro hospitalario dentro del territorio nacional en 2015.
+
+Figura 2: Casos registrados en centros hospitalarios. México 2015
+
+```{r, fig.width = 10, fig.height = 6, echo=FALSE}
+knitr::include_graphics("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/Map_1_Rinitis_v5.jpg")
+```
+Fuente: elaboración propia con datos del SINAIS 2015.
+
+
+Si bien el efecto de las ciudades de mayor tamaño poblacional es claro
+en la región centro; también se identifica la presencia del padecimiento en
+hospitales desde la frontera sur y sitios distantes del centro como aquellos
+en el norte del país, tal es el caso del Hospital General de Zona Medicina
+familiar 1 (HGZMF) de la ciudad Durango, que registró el mayor número
+de casos en México con un total de 152.
+Esta dispersión territorial sugiere una combinación compleja en los
+determinantes, más allá de la distinción entre espacios urbanos y rurales
+y al mismo tiempo advierte sobre la necesidad de realizar estimaciones
+relativas para controlar por el efecto del tamaño poblacional.
+
+
+
+
