@@ -124,6 +124,7 @@ los 15°C durante todo el año y si tiene fluctuaciones inferiores a los 0°C
 en el rango del primer cuartil de la distribución para los meses de enero y
 febrero (Figura 3).
 
+**Figura 3: Temperatura diaria mínima estación meteorológica automática (EMA clave10092): Durango 1941-2000**
 
 ```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
@@ -148,6 +149,6 @@ ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
 geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")
 ```
-
+###Fuente: elaboración propia con datos del Servicio Meteorológico Nacional (SMN) 1941-2000
 
 
