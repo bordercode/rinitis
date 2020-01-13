@@ -3,20 +3,22 @@ date: "2019-03-29"
 title: About
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+[José Luis Manzanares Rivera](https://www.colef.mx/posgrado/profesores/borrador-automatico-31/)
+es un investigador mexicano especializado en el análisis de datos. Es doctor en ciencias económicas por la  Universidad Autónoma de Baja California y colabora en El Colegio de la Frontera Norte como investigador titular en el Departamento de Estudios Urbanos y del Medio Ambiente.
 
-Hugo makes use of a variety of open source projects including:
+Ha realizado trabajo de investigación en diversos paises entre ellos Chile y Australia.
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+Desde 2012 es miembro del Sistema Nacional de Investigadores del Consejo Nacional de Ciencia y Tecnología y es autor de más de 20 publicaciones científicas, entre ellas 18 artículos académicos en revistas especializadas en países como Argentina, Colombia, Costa Rica y Estados Unidos.  
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+[Redalyc](http://www.redalyc.org/autor.oa?id=20835)
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+[ORCID](http://orcid.org/0000-0003-3394-4967)
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
+> Sus areas de interés incluyen:
+
++ Modelación Estadística.
+
++ Manejo de datos replicable en R
+

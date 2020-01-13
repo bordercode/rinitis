@@ -23,14 +23,14 @@ pygmentsStyle = "pygments"
 [params]
   # Header text, can be markdown
   project_name = "Expresiones de salud pública en el contexto del fenómeno de urbanización en México:"
-  project_tagline = "egresos hospitalarios por Rinitis alérgica en zonas metropolitanas."
+  project_tagline = "Egresos hospitalarios por Rinitis alérgica en zonas metropolitanas."
   
   # Date format for post list and single pages
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "2006-01-02"
 
   # Footer text, can be markdown
-  footer = "[José Luis Manzanares Rivera](https://joseluismanzanaresrivera.github.io/Research/index.html) El Colegio de la Frontera Norte 2020."
+  footer = "[José Luis Manzanares Rivera](https://joseluismanzanaresrivera.github.io/profile/index.html) El Colegio de la Frontera Norte 2020."
 
   # If true, the CSS/JS for Katex math typesetting are enabled
   katex = true
@@ -45,9 +45,9 @@ pygmentsStyle = "pygments"
   header_background_color_secondary = "#ff6161"
 
   # Text colors
-  section_headings_color = "#159957"
-  body_text_color = "#606c71"
-  body_link_color = "#1e6bb8"
+  section_headings_color = "#ff6161"
+  body_text_color = "#1e3328"
+  body_link_color = "#ff3030"
   blockquote_text_color = "#819198"
 
   # Code colors
@@ -61,18 +61,24 @@ pygmentsStyle = "pygments"
 
 [menu]
   [[menu.nav]]
-    name = "Blog"
-    url = "/"
-    weight = 1
-  [[menu.nav]]
-    name = "Tags"
-    url = "/tags/"
+    name = "Analysis"
+    url = "/post/"
     weight = 2
+  [[menu.nav]]
+    name = "Introduction"
+    pre = "Introducción"
+    url = "/Introducción/"
+    weight = 1
   [[menu.nav]]
     name = "About"
     url = "/about/"
     weight = 3
   [[menu.nav]]
+    name = "References"
+    pre ="References"
+    url = "/References/"
+    weight = 4
+  [[menu.nav]]
     name = "RSS"
     url = "/index.xml"
-    weight = 4
+    weight = 5
