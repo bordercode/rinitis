@@ -1,0 +1,46 @@
+---
+title: "Padecimientos asociados y distribución por edad"
+author: "JLMR"
+date: "2019-03-29"
+output: html_document
+---
+
+
+
+```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(eval = TRUE, 
+                      echo = FALSE, 
+                      cache = FALSE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = "R", # Chunks will always have R code, unless noted
+                      error = FALSE,                      
+                      fig.path="Figuras/",  # Set the figure options
+                      fig.align = "center", 
+                      fig.width = 7,
+                      fig.height = 5)
+```
+
+
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(ggthemes)
+library(foreign)
+library(tidyverse)
+library(plotly)
+
+```
+
+
+
+**Figura 4  Distribución edad de egreos Hospitalarios por Rinitis vs. otras causas 2015.**
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/cayman-typography/Age_density.jpg")
+```
+
+
+
+
+

@@ -73,7 +73,7 @@ ta<-ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))
 
 ggplotly(ta)
 ```
-##### Fuente: Elaboración propia datos SINAIS 2015.
+Fuente: Elaboración propia datos SINAIS 2015.
 
 
 La estimación permite distinguir un subconjunto de 12 entidades en
@@ -99,7 +99,7 @@ casos por centro hospitalario dentro del territorio nacional en 2015.
 ```{r, fig.width = 10, fig.height = 6, echo=FALSE}
 knitr::include_graphics("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/Map_1_Rinitis_v5.jpg")
 ```
-###### Fuente: elaboración propia con datos del SINAIS 2015.
+Fuente: elaboración propia con datos del SINAIS 2015.
 
 
 Si bien el efecto de las ciudades de mayor tamaño poblacional es claro
@@ -117,6 +117,7 @@ relativas para controlar por el efecto del tamaño poblacional.
 A continuación, se considera el caso de Durango con mayor detenimiento a partir del análisis del componente climático, un determinante de
 índole ambiental reconocido con potencial explicativo en esta problemá-
   tica.
+  
 El rango de las fluctuaciones en la temperatura mínima diaria observada en la estación de monitoreo con clave 10092 ubicada en la ciudad de
 Durango (lat 0024.024, log -104.673, alt 1,900 msnm), aporta evidencia de
 un patrón inferior a los 5°C entre los meses de noviembre y febrero, trayectoria consistente por más de cuatro décadas de registros examinados. Más
@@ -127,7 +128,7 @@ febrero (Figura 3).
 
 **Figura 3: Temperatura diaria mínima estación meteorológica automática (EMA clave10092): Durango 1941-2000**
   
-  ```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
+```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/ema10092_base.csv")%>%
   mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
@@ -150,5 +151,5 @@ ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
   geom_boxplot()+
   xlab("Mes")+ylab("Temperatura diaria mínima°c")
 ```
-###Fuente: elaboración propia con datos del Servicio Meteorológico Nacional (SMN) 1941-2000
+Fuente: elaboración propia con datos del Servicio Meteorológico Nacional (SMN) 1941-2000
 
