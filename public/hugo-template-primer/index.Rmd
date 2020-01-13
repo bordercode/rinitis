@@ -1,0 +1,44 @@
+---
+title: "Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa. México 2015."
+author: "JLMR"
+date: "2019-04-04"
+output: html_document
+---
+
+
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(ggplot2)
+library(tidyverse)
+getwd()
+```
+
+
+En primera instancia, se presenta la tasa de morbilidad por entidad, lo que
+permite contar con el escenario nacional como una base de referencia (Figura 1).
+
+
+Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa  México 2015.
+
+```{r  PLOT  Tasas 2015  por sexo y edad }
+
+TASA15<-readRDS("TASA15.rds")
+  glimpse(TASA15)
+  
+ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
+geom_point()+
+theme_bw()+
+geom_vline(xintercept=20,linetype="dashed", size=.5)+
+ xlab("Estado")+ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))+
+ylab("Tasa de Morbiliad   (Millón de hab.)")+
+scale_colour_manual(values = c("deepskyblue3", "deeppink3"), 
+                      labels = c("Hombre", "Mujer"))+
+annotate("text", x="Guanajuato", y=100, label="Elevada inicdencia")+
+annotate("text", x="Chiapas", y=60, label="Tasa Promedio Nacional")+
+annotate("text", x="Chiapas", y=52, label="16")+
+annotate("rect", xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill="deeppink3")
+
+ggsave("Tasa_mor_15_rinitis15.tiff", width = 21, height = 16, units = "cm",dpi=300)
+
+```
+Fuente: Elaboración propia datos SINAIS 2015.

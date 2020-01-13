@@ -17,7 +17,9 @@
       <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/hugo-template-primer/</guid>
-      <description>En primera instancia, se presenta la tasa de morbilidad por entidad, lo que permite contar con el escenario nacional como una base de referencia (Figura 1).</description>
+      <description>En primera instancia, se presenta la tasa de morbilidad por entidad, lo quepermite contar con el escenario nacional como una base de referencia (Figura 1).
+Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa México 2015.
+TASA15&amp;lt;-readRDS(&amp;quot;TASA15.rds&amp;quot;)glimpse(TASA15)## Observations: 64## Variables: 9## $ X &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,...## $ Sexo &amp;lt;fct&amp;gt; 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 2, 2, .</description>
     </item>
     
     <item>
