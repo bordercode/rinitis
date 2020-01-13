@@ -4,8 +4,9 @@ author: "JLMR"
 date: "2019-04-04"
 output: html_document
 ---
-
-
+  
+  
+  
 ```{r  echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 library(ggthemes)
 library(foreign)
@@ -50,29 +51,29 @@ permite contar con el escenario nacional como una base de referencia (Figura 1).
 
 
 **Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa  México 2015.**
-
+  
 ```{r echo = FALSE, eval = TRUE, message=FALSE, fig.width = 10, fig.height = 6}
 
 TASA15<-readRDS("TASA15.rds")%>%
-mutate(Tasa=as.numeric(Tasa),Sexo=as.factor(Sexo), Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
+  mutate(Tasa=as.numeric(Tasa),Sexo=as.factor(Sexo), Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
 
 
 ta<-ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
-geom_point()+
-theme_bw()+
-geom_vline(xintercept=20,linetype="dashed", size=.5)+
- xlab("Estado")+ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))+
-ylab("Tasa de Morbiliad   (Millón de hab.)")+
-scale_colour_manual(values = c("deepskyblue3", "deeppink3"), 
+  geom_point()+
+  theme_bw()+
+  geom_vline(xintercept=20,linetype="dashed", size=.5)+
+  xlab("Estado")+ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))+
+  ylab("Tasa de Morbiliad   (Millón de hab.)")+
+  scale_colour_manual(values = c("deepskyblue3", "deeppink3"), 
                       labels = c("Hombre", "Mujer"))+
-annotate("text", x="Guanajuato", y=100, label="Elevada inicdencia")+
-annotate("text", x="Chiapas", y=60, label="Tasa Promedio Nacional")+
-annotate("text", x="Chiapas", y=52, label="16")+
-annotate("rect", xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill="deeppink3")
+  annotate("text", x="Guanajuato", y=100, label="Elevada inicdencia")+
+  annotate("text", x="Chiapas", y=60, label="Tasa Promedio Nacional")+
+  annotate("text", x="Chiapas", y=52, label="16")+
+  annotate("rect", xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill="deeppink3")
 
 ggplotly(ta)
 ```
-###### Fuente: Elaboración propia datos SINAIS 2015.
+##### Fuente: Elaboración propia datos SINAIS 2015.
 
 
 La estimación permite distinguir un subconjunto de 12 entidades en
@@ -94,7 +95,7 @@ la complejidad de los determinantes de este padecimiento. Para comprender mejor 
 casos por centro hospitalario dentro del territorio nacional en 2015.
 
 **Figura 2: Casos registrados en centros hospitalarios. México 2015**
-
+  
 ```{r, fig.width = 10, fig.height = 6, echo=FALSE}
 knitr::include_graphics("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/Map_1_Rinitis_v5.jpg")
 ```
@@ -115,7 +116,7 @@ relativas para controlar por el efecto del tamaño poblacional.
 
 A continuación, se considera el caso de Durango con mayor detenimiento a partir del análisis del componente climático, un determinante de
 índole ambiental reconocido con potencial explicativo en esta problemá-
-tica.
+  tica.
 El rango de las fluctuaciones en la temperatura mínima diaria observada en la estación de monitoreo con clave 10092 ubicada en la ciudad de
 Durango (lat 0024.024, log -104.673, alt 1,900 msnm), aporta evidencia de
 un patrón inferior a los 5°C entre los meses de noviembre y febrero, trayectoria consistente por más de cuatro décadas de registros examinados. Más
@@ -125,16 +126,16 @@ en el rango del primer cuartil de la distribución para los meses de enero y
 febrero (Figura 3).
 
 **Figura 3: Temperatura diaria mínima estación meteorológica automática (EMA clave10092): Durango 1941-2000**
-
-```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
+  
+  ```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/ema10092_base.csv")%>%
-mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
-select(-c(TMINC,TMAXC))
+  mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
+  select(-c(TMINC,TMAXC))
 
 
 DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
-mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
+  mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
 
 
 meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
@@ -146,9 +147,8 @@ levels(DGO$nombre )
 ## Plot Daily  1941-2000
 
 ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
-geom_boxplot()+
-xlab("Mes")+ylab("Temperatura diaria mínima°c")
+  geom_boxplot()+
+  xlab("Mes")+ylab("Temperatura diaria mínima°c")
 ```
 ###Fuente: elaboración propia con datos del Servicio Meteorológico Nacional (SMN) 1941-2000
-
 
