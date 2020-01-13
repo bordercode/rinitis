@@ -42,7 +42,7 @@ más reciente del periodo de estudio: 2015, considerando las Zonas Metropolitana
 
 
 **Figura 6: Clasificación del Cociente de localización (LQ) para Zonas Metropolitanas, México 2015.**
-```{r}
+```{r, fig.width = 10, fig.height = 6, echo=FALSE}
 
 index<-read.csv("LQzm.csv")%>%
   mutate(Nivel=as.factor(ifelse(lq>1,"Alto","Moderado")))
@@ -59,3 +59,102 @@ ggplot(index, aes(x=reorder(NOM_SUN,lq), y=lq, size=lq, color=Nivel))+
            size=.3, arrow=arrow()) 
 ```
 Fuente: Elaboración propia con datos del SINAIS 2015.
+
+Los resultados aportan un par de elementos de mayor especificidad sobre la distribución territorial del padecimiento. Primero, se encuentra que
+una cuarta parte de las zonas metropolitanas en México presentan una incidencia superior al contexto nacional (LQ > 1), sin embargo, la mayoría
+de estas zonas de alta incidencia no pertenecen a la región centro del país,
+donde se tiene la mayor concentración poblacional. De hecho, entre las
+tres ZM de mayor incidencia se encuentra la ZM de Monclova, Coahuila, un importante centro de actividad metalúrgica del noreste del país con
+una población que no rebasa el medio millón de habitantes (CONAPO,
+2010)4 y que es reconocido por su la alta concentración de partículas PM105
+(AQICN, 2018).
+En segundo lugar, se confirma la alta concentración de rinitis en importantes centros poblacionales ubicados en la región centro del país, a pesar
+de que ya se ha controlado por el efecto del tamaño poblacional. Estos
+incluyen la ZM Valle de México (LQ = 1.62) y Querétaro entre otros.
+Asimismo, en la región destaca el caso de Tianguistenco, Estado de
+México (LQ = 5.41) que es la zona de mayor LQ en todo el país, con una
+concentración relativa de cinco veces el nivel registrado en el contexto
+nacional.
+
+Además es una ZM situada en una región que comparte un rasgo característico con otros espacios ya detectados con alta incidencia como lo es su
+régimen climático, que en el caso particular presenta una temperatura mí-
+nima promedio anual de 3.4°C (Servicio Meteorológico Nacional SMN).
+Resulta de interés en esta perspectiva espacial, determinar si la incidencia que se observa corresponde a un comportamiento aislado o bien
+se tiene un patrón sistemático en términos temporales, lo que permitiría
+establecer pautas de intervención con mayor precisión. Para lograr este
+propósito, se estima a continuación el cociente de localización para cada
+año en el periodo (2009-2015). La Figura 7 muestra los resultados.
+
+
+**Figura 7: Cociente de localización (LQ). Zonas Metropolitanas México 2009-2015.**
+
+```{r, fig.width = 10, fig.height = 6, echo=FALSE}
+
+lqtrend<-read.csv("lqtrend09-15.csv")%>%
+  select(-X)%>%
+  mutate(date=as.factor(date))
+
+
+cb_palette <- c("black", "#E69F00", "#56B4E9", "#009E73", "#F0E442",
+"#0072B2", "red3")
+
+ggplot(lqtrend,aes(x=reorder(NOM_SUN,lq), y=lq, color=date))+
+         geom_point()+
+         coord_flip()+
+         scale_colour_manual(values=cb_palette)+
+         theme_bw()+
+          xlab("Zona Metropolitana")+ylab("LQ")+
+  geom_hline(yintercept=1, linetype="dashed")+
+  annotate("text", x="Tula", y=2, label="LQ=1 NIvel Nacional")+
+  annotate("segment", x="Guadalajara", xend="Guadalajara", y=2.8, yend=1.2, size=.3, arrow=arrow())+labs(color="Año")
+```
+
+Fuente: Elaboración propia con datos del SINAIS 2009-2015.
+
+La estimación permite distinguir zonas metropolitanas con un patrón
+sistemático de alta incidencia, por medio de aquellos años que se encuentran a la derecha de la línea punteada de referencia. Destaca nuevamente
+el caso de dos ZM en el estado de Coahuila, en primera instancia la ZM
+fronteriza de Piedras Negras y el caso de la ZM Monclova-Fronteras. En el
+primer caso muestra niveles de LQ > 1 durante todo el periodo. Mientras el
+caso de Monclova, si bien muestra un patrón persistente elevado, registró
+una excepción con LQ = 0.87 en el año 2014.
+Adicionalmente se encuentra que zonas metropolitanas de gran tama-
+ño en el país como son Monterrey y Guadalajara, no presentan un patrón
+sistemático de elevados niveles de concentración en egresos hospitalarios
+por rinitis, un hallazgo contrario a la hipótesis sobre el papel que el fenó-
+meno de urbanización implica respecto a la incidencia del padecimiento
+estudiado.
+
+La Figura 8 muestra con mayor detalle la trayectoria temporal de concentración en casos por rinitis de las ZM con mayor persistencia.
+
+**Figura 8: Evolución del LQ en principales Zonas Metropolitanas México 2009-2015.**
+
+```{r , fig.width = 10, fig.height = 6, echo=FALSE}
+
+T10_zm<-readRDS("T10_zm.rds")
+
+ggplot(T10_zm, aes(x=date, y=lq))+ 
+geom_bar(stat="identity")+
+facet_grid(~NOM_SUN)+
+geom_hline(yintercept = 1)+
+theme(axis.ticks=element_blank())+
+scale_x_discrete(breaks=c("09",12,15))+
+xlab("Zona Metropolitana / Fecha: 2009...2015") +
+ylab("LQ")+
+theme_bw()
+```
+Fuente: Elaboración propia con datos del SINAIS 2009-2015.
+
+
+
+
+Podemos observar que si bien las ZM consideradas registran un patrón sistemático con LQ > 1, el problema ha tendido a disminuir en algunas zonas, el caso de Piedras Negras, Coahuila es
+un ejemplo representativo de este comportamiento.
+
+(Para mayor claridad, la línea de referencia indica el nivel de concentración nacional LQ = 1).
+
+De forma inversa la
+ZM de Tianguistenco, Estado de México, muestra un claro ascenso en la
+concentración relativa de casos por rinitis. Este nivel de contraste permite
+contar con elementos para proponer estudios de caso en regiones del país
+específicas que permitan indagar los determinantes locales.
