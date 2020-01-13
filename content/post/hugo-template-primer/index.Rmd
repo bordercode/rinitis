@@ -125,7 +125,7 @@ en el rango del primer cuartil de la distribución para los meses de enero y
 febrero (Figura 3).
 
 
-```{r   echo = FALSE, eval = TRUE, message=FALSE, fig.width = 10, fig.height = 6}
+```{r   echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/ema10092_base.csv")%>%
 mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
@@ -147,8 +147,6 @@ levels(DGO$nombre )
 ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
 geom_boxplot()+
 xlab("Mes")+ylab("Temperatura diaria mínima°c")
-
-theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
 ```
 
 
