@@ -10,6 +10,7 @@ output: html_document
 ```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 library(ggplot2)
 library(tidyverse)
+library(plotly)
 getwd()
 ```
 
@@ -20,12 +21,11 @@ permite contar con el escenario nacional como una base de referencia (Figura 1).
 
 Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa  México 2015.
 
-```{r echo = FALSE, eval = TRUE, message=FALSE, include = FALSE, fig.width = 10, fig.height = 6}
+```{r echo = FALSE, eval = TRUE, message=FALSE, fig.width = 10, fig.height = 6}
 
 TASA15<-readRDS("TASA15.rds")
-  glimpse(TASA15)
-  
-ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
+
+ta<-ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
 geom_point()+
 theme_bw()+
 geom_vline(xintercept=20,linetype="dashed", size=.5)+
@@ -38,7 +38,7 @@ annotate("text", x="Chiapas", y=60, label="Tasa Promedio Nacional")+
 annotate("text", x="Chiapas", y=52, label="16")+
 annotate("rect", xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill="deeppink3")
 
-ggsave("Tasa_mor_15_rinitis15.tiff", width = 21, height = 16, units = "cm",dpi=300)
+ggplotly(ta)
 
 ```
 Fuente: Elaboración propia datos SINAIS 2015.
