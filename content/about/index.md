@@ -8,7 +8,7 @@ es un investigador mexicano especializado en el análisis de datos. Es doctor en
 
 Ha realizado trabajo de investigación en diversos paises entre ellos Chile y Australia.
 
-Desde 2012 es miembro del Sistema Nacional de Investigadores del Consejo Nacional de Ciencia y Tecnología y es autor de más de 20 publicaciones científicas, entre ellas 18 artículos académicos en revistas especializadas en países como Argentina, Colombia, Costa Rica y Estados Unidos.  
+Desde 2012 es miembro del Sistema Nacional de Investigadores del Consejo Nacional de Ciencia y Tecnología y es autor de más de 20 publicaciones científicas, entre ellas 19 artículos académicos en revistas especializadas en países como Argentina, Colombia, Costa Rica y Estados Unidos.  
 
 
 [Redalyc](http://www.redalyc.org/autor.oa?id=20835)
