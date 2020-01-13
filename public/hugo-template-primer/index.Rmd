@@ -20,7 +20,7 @@ permite contar con el escenario nacional como una base de referencia (Figura 1).
 
 Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa  México 2015.
 
-```{r  PLOT  Tasas 2015  por sexo y edad }
+```{r echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 
 TASA15<-readRDS("TASA15.rds")
   glimpse(TASA15)

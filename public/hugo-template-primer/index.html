@@ -83,33 +83,6 @@
 <p>En primera instancia, se presenta la tasa de morbilidad por entidad, lo que
 permite contar con el escenario nacional como una base de referencia (Figura 1).</p>
 <p>Figura 1 Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa México 2015.</p>
-<pre class="r"><code>TASA15&lt;-readRDS(&quot;TASA15.rds&quot;)
-  glimpse(TASA15)</code></pre>
-<pre><code>## Observations: 64
-## Variables: 9
-## $ X       &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,...
-## $ Sexo    &lt;fct&gt; 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 2, 2, ...
-## $ id_ent  &lt;fct&gt; 10, 10, 9, 9, 23, 22, 5, 23, 12, 11, 18, 12, 3, 2, 5, ...
-## $ espT    &lt;dbl&gt; 7455.1330, 4429.9865, 4152.0674, 3713.0839, 2187.9276,...
-## $ pstd    &lt;dbl&gt; 61958979, 59046837, 59046837, 61958979, 59046837, 5904...
-## $ Tasa    &lt;int&gt; 120, 75, 70, 59, 37, 33, 29, 29, 28, 24, 23, 23, 23, 2...
-## $ cedocve &lt;int&gt; 10, 10, 9, 9, 23, 22, 5, 23, 12, 11, 18, 12, 3, 2, 5, ...
-## $ Entidad &lt;fct&gt; Durango, Durango, CDMX, CDMX, QR, Querétaro , Coahuila...
-## $ Alta    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...</code></pre>
-<pre class="r"><code>ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
-geom_point()+
-theme_bw()+
-geom_vline(xintercept=20,linetype=&quot;dashed&quot;, size=.5)+
- xlab(&quot;Estado&quot;)+ theme(axis.text.x = element_text(angle=45, hjust=1, vjust=1))+
-ylab(&quot;Tasa de Morbiliad   (Millón de hab.)&quot;)+
-scale_colour_manual(values = c(&quot;deepskyblue3&quot;, &quot;deeppink3&quot;), 
-                      labels = c(&quot;Hombre&quot;, &quot;Mujer&quot;))+
-annotate(&quot;text&quot;, x=&quot;Guanajuato&quot;, y=100, label=&quot;Elevada inicdencia&quot;)+
-annotate(&quot;text&quot;, x=&quot;Chiapas&quot;, y=60, label=&quot;Tasa Promedio Nacional&quot;)+
-annotate(&quot;text&quot;, x=&quot;Chiapas&quot;, y=52, label=&quot;16&quot;)+
-annotate(&quot;rect&quot;, xmin=20, xmax=32, ymin=0, ymax=120, alpha=.1,fill=&quot;deeppink3&quot;)</code></pre>
-<p><img src="/post/hugo-template-primer/index_files/figure-html/PLOT%20%20Tasas%202015%20%20por%20sexo%20y%20edad-1.png" width="672" /></p>
-<pre class="r"><code>ggsave(&quot;Tasa_mor_15_rinitis15.tiff&quot;, width = 21, height = 16, units = &quot;cm&quot;,dpi=300)</code></pre>
 <p>Fuente: Elaboración propia datos SINAIS 2015.</p>
 
   
