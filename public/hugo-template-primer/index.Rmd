@@ -6,6 +6,18 @@ output: html_document
 ---
 
 
+```{r  echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(ggthemes)
+library(foreign)
+library(knitr)
+library(tidyverse)
+library(DT)
+library(plotly)
+library(grid)
+library(gridExtra)
+```
+
+
 
 ```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
@@ -113,7 +125,7 @@ en el rango del primer cuartil de la distribución para los meses de enero y
 febrero (Figura 3).
 
 
-```{r   TEMPERATURA  Durango}
+```{r   echo = FALSE, eval = TRUE, message=FALSE, fig.width = 10, fig.height = 6}
 
 DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/ema10092_base.csv")%>%
 mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
@@ -128,7 +140,6 @@ meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio
 
 
 DGO<-left_join(meses,DGO)
-glimpse(DGO)
 levels(DGO$nombre )
 
 ## Plot Daily  1941-2000
