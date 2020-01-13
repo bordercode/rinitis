@@ -61,11 +61,11 @@ pygmentsStyle = "pygments"
 
 [menu]
   [[menu.nav]]
-    name = "Analysis"
+    name = "Análisis"
     url = "/post/"
     weight = 2
   [[menu.nav]]
-    name = "Introduction"
+    name = "Introducción"
     pre = "Introducción"
     url = "/Introducción/"
     weight = 1
@@ -74,8 +74,8 @@ pygmentsStyle = "pygments"
     url = "/about/"
     weight = 3
   [[menu.nav]]
-    name = "References"
-    pre ="References"
+    name = "Referencias"
+    pre ="Referencias"
     url = "/References/"
     weight = 4
   [[menu.nav]]
