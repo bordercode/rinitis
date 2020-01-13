@@ -1,7 +1,7 @@
 ---
 title: "Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados"
 author: "JLMR"
-date: "2019-03-29"
+date: "2020-01-06"
 output: html_document
 ---
 

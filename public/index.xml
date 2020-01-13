@@ -6,7 +6,7 @@
     <description>Recent content in Introducción on Rintis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Tasa de morbilidad ajustada por edad y sexo, según entidad Federativa. México 2015.</title>
       <link>/hugo-template-primer/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/hugo-template-primer/</guid>
       <description>En primera instancia, se presenta la tasa de morbilidad por entidad, lo quepermite contar con el escenario nacional como una base de referencia (Figura 1).
@@ -30,20 +30,9 @@ Tasa: 37</description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>José Luis Manzanares Rivera es un investigador mexicano especializado en el análisis de datos. Es doctor en ciencias económicas por la Universidad Autónoma de Baja California y colabora en El Colegio de la Frontera Norte como investigador titular en el Departamento de Estudios Urbanos y del Medio Ambiente.
-Ha realizado trabajo de investigación en diversos paises entre ellos Chile y Australia.
-Desde 2012 es miembro del Sistema Nacional de Investigadores del Consejo Nacional de Ciencia y Tecnología y es autor de más de 20 publicaciones científicas, entre ellas 19 artículos académicos en revistas especializadas en países como Argentina, Colombia, Costa Rica y Estados Unidos.</description>
-    </item>
-    
-    <item>
       <title>Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados</title>
       <link>/cayman-typography/</link>
-      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/cayman-typography/</guid>
       <description>Con el objetivo de indagar el impacto de la enfermedad sobre los diferentes grupos etarios, se construyen a continuación las curvas de densidadpara la distribución de edades en las que ocurren los egresos hospitalariosen el país, información que permitirá conocer el perfil de posibles gruposvulnerables, un aspecto de utilidad para el diseño de estrategias de atenciónfocalizadas.
@@ -53,11 +42,22 @@ Figura 4 Distribución edad de egreos Hospitalarios por Rinitis vs.</description
     <item>
       <title>Concentración del padecimiento en Zonas Metropolitanas de México</title>
       <link>/katex-math-typesetting/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
       <description>Retomando la perspectiva espacial, es importante determinar la concentración relativa del padecimiento para controlar el sesgo que el tamañode cada localidad genera cuando se evalúan las cifras absolutas. Con estepropósito se estima a continuación el cociente de localización para el añomás reciente del periodo de estudio: 2015, considerando las Zonas Metropolitanas como unidad de análisis (Figura 6).
 Figura 6: Clasificación del Cociente de localización (LQ) para Zonas Metropolitanas, México 2015.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 29 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>José Luis Manzanares Rivera es un investigador mexicano especializado en el análisis de datos. Es doctor en ciencias económicas por la Universidad Autónoma de Baja California y colabora en El Colegio de la Frontera Norte como investigador titular en el Departamento de Estudios Urbanos y del Medio Ambiente.
+Ha realizado trabajo de investigación en diversos paises entre ellos Chile y Australia.
+Desde 2012 es miembro del Sistema Nacional de Investigadores del Consejo Nacional de Ciencia y Tecnología y es autor de más de 20 publicaciones científicas, entre ellas 19 artículos académicos en revistas especializadas en países como Argentina, Colombia, Costa Rica y Estados Unidos.</description>
     </item>
     
     <item>
