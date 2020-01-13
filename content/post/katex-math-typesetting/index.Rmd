@@ -1,0 +1,61 @@
+---
+title: "Concentración del padecimiento en Zonas Metropolitanas de México"
+author: "JLMR"
+date: "2019-03-28"
+output: html_document
+---
+
+
+```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(eval = TRUE, 
+                      echo = FALSE, 
+                      cache = FALSE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = "R", # Chunks will always have R code, unless noted
+                      error = FALSE,                      
+                      fig.path="Figuras/",  # Set the figure options
+                      fig.align = "center", 
+                      fig.width = 7,
+                      fig.height = 5)
+```
+
+
+
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(ggthemes)
+library(foreign)
+library(tidyverse)
+library(plotly)
+
+```
+
+
+
+Retomando la perspectiva espacial, es importante determinar la concentración relativa del padecimiento para controlar el sesgo que el tamaño
+de cada localidad genera cuando se evalúan las cifras absolutas. Con este
+propósito se estima a continuación el cociente de localización para el año
+más reciente del periodo de estudio: 2015, considerando las Zonas Metropolitanas como unidad de análisis (Figura 6).
+
+
+
+
+**Figura 6: Clasificación del Cociente de localización (LQ) para Zonas Metropolitanas, México 2015.**
+```{r}
+
+index<-read.csv("LQzm.csv")%>%
+  mutate(Nivel=as.factor(ifelse(lq>1,"Alto","Moderado")))
+
+ggplot(index, aes(x=reorder(NOM_SUN,lq), y=lq, size=lq, color=Nivel))+
+  geom_point()+
+  xlab("Zona Metropolitana")+ylab("LQ")+
+  theme_bw()+
+  scale_colour_hue(l=45)+
+  coord_flip()+
+  geom_hline(yintercept=1, linetype="dashed")+
+  annotate("text", x="SLP", y=2, label="LQ=1 NIvel Nacional")+
+  annotate("segment", x="Guadalajara", xend="Guadalajara", y=2.8, yend=1.2, 
+           size=.3, arrow=arrow()) 
+```
+Fuente: Elaboración propia con datos del SINAIS 2015.

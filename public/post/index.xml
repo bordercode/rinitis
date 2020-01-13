@@ -40,16 +40,13 @@ Figura 4 Distribución edad de egreos Hospitalarios por Rinitis vs.</description
     </item>
     
     <item>
-      <title>Katex Math Typesetting</title>
+      <title>Concentración del padecimiento en Zonas Metropolitanas de México</title>
       <link>/katex-math-typesetting/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/katex-math-typesetting/</guid>
-      <description>Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
-See the online reference of supported TeX functions.
-Note: For inline math to render correctly, your content file extension must be .mmark. See the official mmark site.
-Inline math: $$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$ Inline math: \( \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… \)
-Block math: $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$ Block math:</description>
+      <description>Retomando la perspectiva espacial, es importante determinar la concentración relativa del padecimiento para controlar el sesgo que el tamañode cada localidad genera cuando se evalúan las cifras absolutas. Con estepropósito se estima a continuación el cociente de localización para el añomás reciente del periodo de estudio: 2015, considerando las Zonas Metropolitanas como unidad de análisis (Figura 6).
+Figura 6: Clasificación del Cociente de localización (LQ) para Zonas Metropolitanas, México 2015.</description>
     </item>
     
     <item>
