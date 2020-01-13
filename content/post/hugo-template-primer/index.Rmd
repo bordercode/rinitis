@@ -6,6 +6,36 @@ output: html_document
 ---
 
 
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+library(ggthemes)
+library(foreign)
+library(knitr)
+library(tidyverse)
+library(DT)
+library(plotly)
+library(grid)
+library(gridExtra)
+```
+
+
+
+```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(eval = TRUE, 
+                      echo = FALSE, 
+                      cache = FALSE,
+                      include = TRUE,
+                      collapse = FALSE,
+                      dependson = NULL,
+                      engine = "R", # Chunks will always have R code, unless noted
+                      error = FALSE,                      
+                      fig.path="Figuras/",  # Set the figure options
+                      fig.align = "center", 
+                      fig.width = 7,
+                      fig.height = 5)
+```
+
+
+
 
 ```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
 library(ggplot2)
@@ -82,6 +112,45 @@ determinantes, más allá de la distinción entre espacios urbanos y rurales
 y al mismo tiempo advierte sobre la necesidad de realizar estimaciones
 relativas para controlar por el efecto del tamaño poblacional.
 
+
+A continuación, se considera el caso de Durango con mayor detenimiento a partir del análisis del componente climático, un determinante de
+índole ambiental reconocido con potencial explicativo en esta problemá-
+tica.
+El rango de las fluctuaciones en la temperatura mínima diaria observada en la estación de monitoreo con clave 10092 ubicada en la ciudad de
+Durango (lat 0024.024, log -104.673, alt 1,900 msnm), aporta evidencia de
+un patrón inferior a los 5°C entre los meses de noviembre y febrero, trayectoria consistente por más de cuatro décadas de registros examinados. Más
+aún, es posible corroborar que la temperatura mínima promedio no supera
+los 15°C durante todo el año y si tiene fluctuaciones inferiores a los 0°C
+en el rango del primer cuartil de la distribución para los meses de enero y
+febrero (Figura 3).
+
+
+```{r   TEMPERATURA  Durango}
+
+DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-template-primer/ema10092_base.csv")%>%
+mutate(tmin=as.numeric(levels(TMINC)[TMINC]), tmax=as.numeric(levels(TMAXC)[TMAXC]))%>%
+select(-c(TMINC,TMAXC))
+
+
+DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
+mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
+
+
+meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+
+
+DGO<-left_join(meses,DGO)
+glimpse(DGO)
+levels(DGO$nombre )
+
+## Plot Daily  1941-2000
+
+ggplot(DGO,aes(x=fct_inorder(nombre),y=tmin))+
+geom_boxplot()+
+xlab("Mes")+ylab("Temperatura diaria mínima°c")
+
+theme(axis.text.x = element_text(angle=90, hjust=1, vjust=1))
+```
 
 
 
