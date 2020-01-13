@@ -23,7 +23,9 @@ permite contar con el escenario nacional como una base de referencia (Figura 1).
 
 ```{r echo = FALSE, eval = TRUE, message=FALSE, fig.width = 10, fig.height = 6}
 
-TASA15<-readRDS("TASA15.rds")
+TASA15<-readRDS("TASA15.rds")%>%
+mutate(Tasa=as.numeric(Tasa),Sexo=as.factor(Sexo), Sexo=ifelse(Sexo==1,"Hombre","Mujer"))
+names(TASA15)
 
 ta<-ggplot(TASA15, aes(x=reorder(Entidad, Tasa), y=Tasa,colour=Sexo, size=Tasa))+
 geom_point()+
