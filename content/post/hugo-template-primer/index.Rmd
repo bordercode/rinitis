@@ -115,8 +115,7 @@ relativas para controlar por el efecto del tamaño poblacional.
 
 
 A continuación, se considera el caso de Durango con mayor detenimiento a partir del análisis del componente climático, un determinante de
-índole ambiental reconocido con potencial explicativo en esta problemá-
-  tica.
+índole ambiental reconocido con potencial explicativo en esta problemática.
   
 El rango de las fluctuaciones en la temperatura mínima diaria observada en la estación de monitoreo con clave 10092 ubicada en la ciudad de
 Durango (lat 0024.024, log -104.673, alt 1,900 msnm), aporta evidencia de
@@ -137,10 +136,14 @@ DGO10092<-read.csv("C:/Users/LENOVO/Desktop/DESK/web/rinitis/content/post/hugo-t
 
 DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
   mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
+```
 
-
+```{r, results='hide'}
 meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+```
 
+
+```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
 DGO<-left_join(meses,DGO)
 levels(DGO$nombre )
