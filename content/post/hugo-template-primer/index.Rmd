@@ -138,15 +138,13 @@ DGO<-DGO10092%>%mutate(date=as.Date(FECHA, "%d/%m/%Y"))%>%
   mutate(mes=as.integer(substr(FECHA,4,5)),año=substr(FECHA,7,10))
 ```
 
-```{r, include = FALSE}
-meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
-```
-
 
 ```{r, echo = FALSE, eval = TRUE, warning=FALSE, message=FALSE, fig.width = 10, fig.height = 6}
 
+meses<-data.frame(nombre=c("Enero ",	"Febrero",	"Marzo",	"Abril",	"Mayo",	"Junio",	"Julio",	"Agosto",	"Septiembre",	"Octubre",	"Noviembre",	"Diciembre"),mes=seq(1, 12, by=1))
+
 DGO<-left_join(meses,DGO)
-levels(DGO$nombre )
+
 
 ## Plot Daily  1941-2000
 
