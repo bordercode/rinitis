@@ -30,7 +30,7 @@ pygmentsStyle = "pygments"
   dateFormat = "2006-01-02"
 
   # Footer text, can be markdown
-  footer = "[José Luis Manzanares Rivera](https://joseluismanzanaresrivera.github.io/profile/index.html) El Colegio de la Frontera Norte 2020."
+  footer = "All rights reserved [José Luis Manzanares Rivera](https://joseluismanzanaresrivera.github.io/profile/index.html) El Colegio de la Frontera Norte 2020."
 
   # If true, the CSS/JS for Katex math typesetting are enabled
   katex = true
@@ -42,7 +42,7 @@ pygmentsStyle = "pygments"
   # Header colors
   header_heading_color = "#fff"
   header_background_color = "#de125d"
-  header_background_color_secondary = "#ff6161"
+  header_background_color_secondary = "#ffa3a3"
 
   # Text colors
   section_headings_color = "#ff6161"
