@@ -1,10 +1,9 @@
 ---
 title: "Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados"
 author: "JLMR"
-date: "2020-01-06"
+date: "2020-01-02"
 output: html_document
 ---
-
 
 
 ```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
@@ -24,14 +23,13 @@ knitr::opts_chunk$set(eval = TRUE,
 
 
 
-```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE}
+```{r silent-packages, echo = FALSE, eval = TRUE, message=FALSE, include = FALSE, warning=FALSE}
 library(ggthemes)
 library(foreign)
 library(tidyverse)
 library(plotly)
 
 ```
-
 
 
 
@@ -99,5 +97,3 @@ el final del periodo. Sin embargo, el ritmo encontrado en padecimientos
 como apnea y otros trastornos del sueño (G473) cuadruplicó la trayectoria
 de crecimiento general, alcanzando un acumulado de 158.16 por ciento, lo
 que equivale a un incremento anual de 13.8 por ciento.
-
-

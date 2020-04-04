@@ -30,16 +30,6 @@ Tasa: 37</description>
     </item>
     
     <item>
-      <title>Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados</title>
-      <link>/cayman-typography/</link>
-      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/cayman-typography/</guid>
-      <description>Con el objetivo de indagar el impacto de la enfermedad sobre los diferentes grupos etarios, se construyen a continuación las curvas de densidadpara la distribución de edades en las que ocurren los egresos hospitalariosen el país, información que permitirá conocer el perfil de posibles gruposvulnerables, un aspecto de utilidad para el diseño de estrategias de atenciónfocalizadas.
-Figura 4 Distribución edad de egreos Hospitalarios por Rinitis vs.</description>
-    </item>
-    
-    <item>
       <title>Concentración del padecimiento en Zonas Metropolitanas. México.</title>
       <link>/katex-math-typesetting/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
@@ -47,6 +37,16 @@ Figura 4 Distribución edad de egreos Hospitalarios por Rinitis vs.</description
       <guid>/katex-math-typesetting/</guid>
       <description>Retomando la perspectiva espacial, es importante determinar la concentración relativa del padecimiento para controlar el sesgo que el tamañode cada localidad genera cuando se evalúan las cifras absolutas. Con estepropósito se estima a continuación el cociente de localización para el añomás reciente del periodo de estudio: 2015, considerando las Zonas Metropolitanas como unidad de análisis (Figura 6).
 Figura 6: Clasificación del Cociente de localización (LQ) para Zonas Metropolitanas, México 2015.</description>
+    </item>
+    
+    <item>
+      <title>Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados</title>
+      <link>/cayman-typography/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/cayman-typography/</guid>
+      <description>Con el objetivo de indagar el impacto de la enfermedad sobre los diferentes grupos etarios, se construyen a continuación las curvas de densidadpara la distribución de edades en las que ocurren los egresos hospitalariosen el país, información que permitirá conocer el perfil de posibles gruposvulnerables, un aspecto de utilidad para el diseño de estrategias de atenciónfocalizadas.
+Figura 4 Distribución edad de egreos Hospitalarios por Rinitis vs.</description>
     </item>
     
   </channel>

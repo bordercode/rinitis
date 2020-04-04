@@ -6,7 +6,6 @@ output: html_document
 ---
 
 
-
 ```{r set-global-options, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(eval = TRUE, 
                       echo = FALSE, 
@@ -98,7 +97,3 @@ el final del periodo. Sin embargo, el ritmo encontrado en padecimientos
 como apnea y otros trastornos del sueño (G473) cuadruplicó la trayectoria
 de crecimiento general, alcanzando un acumulado de 158.16 por ciento, lo
 que equivale a un incremento anual de 13.8 por ciento.
-
-
-
-
