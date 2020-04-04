@@ -2,9 +2,7 @@
 title: "Distribución por edad de egresos hospitalarios  y  evolución en padecimientos asociados"
 author: "JLMR"
 date: "2020-01-02"
-leafletmap: true
-always_allow_html: yes
-output: github_document
+output: html_document
 ---
 
 
@@ -102,43 +100,3 @@ que equivale a un incremento anual de 13.8 por ciento.
 
 
 
-
-
-```{r}
-library(leaflet)
-library(tidyverse)
-
-
-setwd("C:/Users/LENOVO/Desktop/DESK/shiny-apps/sarscov2")
-
-conf2<-read.csv("time_series_covid_19_confirmed.csv")%>% 
-    select(Province.State, Country.Region, Long, Lat, X4.1.20)%>%
-    rename(casos=X4.1.20)
-
-getColor <- function(conf2) {
-        sapply(conf2$casos, function(casos) {
-        if(casos <= 19) {
-            "green"
-        } else if(casos <=173 ) {
-            "orange"
-        } else {
-            "red"
-        } })
-}
-
-icons <- awesomeIcons(
-    icon = 'ios-close',
-    iconColor = 'black',
-    library = 'ion',
-    markerColor = getColor(conf2))
-
-
-
-m <- leaflet(conf2) %>%
-    addProviderTiles("CartoDB.DarkMatterNoLabels")%>%
-    addMarkers(lng=-110.56, lat=31.17, popup="Nogales,Sonora")%>%
-    setView(lng=-111.21, lat=29.51, zoom = 4.6)%>%
-    addAwesomeMarkers(icon=icons, 
-    label=~as.character(casos))
-m  # Print the map
-```
