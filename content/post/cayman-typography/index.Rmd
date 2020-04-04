@@ -35,7 +35,6 @@ library(plotly)
 
 
 
-
 Con el objetivo de indagar el impacto de la enfermedad sobre los diferentes grupos etarios, se construyen a continuación las curvas de densidad
 para la distribución de edades en las que ocurren los egresos hospitalarios
 en el país, información que permitirá conocer el perfil de posibles grupos
